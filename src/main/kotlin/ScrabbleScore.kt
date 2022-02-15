@@ -1,3 +1,5 @@
+import com.sun.tools.javac.Main
+
 class ScrabbleScore {
 
     fun scoreWord(word: String): Int{
@@ -5,7 +7,7 @@ class ScrabbleScore {
         return word.sumOf{ scoreLetter(it) }
     }
 
-    //TODO the program if the user enters in any chars other than capital letters...try fix this.
+    //the program if the user enters in any chars other than capital letters...try fix this.
     //Reference: https://exercism.org/tracks/kotlin/exercises/scrabble-score/solutions?page=1
     private fun scoreLetter(char: Char): Int {
         return when (char.uppercase()) {
@@ -16,7 +18,7 @@ class ScrabbleScore {
             in "K" -> 5
             in "JX" -> 8
             in "QZ" -> 10
-            else -> error("Unknown character")
+            else -> 0
         }
     }
 

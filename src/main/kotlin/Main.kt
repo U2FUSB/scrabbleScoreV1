@@ -12,12 +12,12 @@ private val scrabbleScore = ScrabbleScore()
 
 fun main() {
     println(scrabbleScore.letterValues())
-    while (true) {
+    do {
         print("Enter a word and compute the Scrabble Score: ")
         val word = input.nextLine()
         //change to use a string template:
         println("$word has a value of ${scrabbleScore.scoreWord(word)}")
-    }
+    } while (!word.contains("-1") )
 }
 
 
