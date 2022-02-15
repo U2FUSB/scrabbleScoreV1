@@ -2,8 +2,9 @@ import java.util.*
 
 private val input = Scanner(System.`in`)
 private val scrabbleScore = ScrabbleScore()
+private var end = false
 
-//TODO This program has bugs and incomplete code in it...you will need to fix them so you have the following functionality:
+//This program has bugs and incomplete code in it...you will need to fix them so you have the following functionality:
 // The main method should:
 //    - print out the letterValues to the console
 //    - ask the user to enter a word
@@ -16,8 +17,9 @@ fun main() {
         print("Enter a word and compute the Scrabble Score: ")
         val word = input.nextLine()
         //change to use a string template:
-        println("$word has a value of ${scrabbleScore.scoreWord(word)}")
-    } while (!word.contains("-1") )
+        if (!word.contains("-1")) println("$word has a value of ${scrabbleScore.scoreWord(word)}")
+        else end = true
+    } while (!end)
 }
 
 
