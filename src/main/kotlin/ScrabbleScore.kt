@@ -8,7 +8,7 @@ class ScrabbleScore {
     //TODO the program if the user enters in any chars other than capital letters...try fix this.
     //Reference: https://exercism.org/tracks/kotlin/exercises/scrabble-score/solutions?page=1
     private fun scoreLetter(char: Char): Int {
-        return when (char) {
+        return when (char.uppercase()) {
             in "AEIOULNRST" -> 1
             in "DG" -> 2
             in "BCMP" -> 3
