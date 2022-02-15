@@ -1,13 +1,9 @@
-import com.sun.tools.javac.Main
-
 class ScrabbleScore {
 
     fun scoreWord(word: String): Int{
-        //calculate using the scoreLetter method below, the scrabble value of the word passed as a parameter
         return word.sumOf{ scoreLetter(it) }
     }
 
-    //the program if the user enters in any chars other than capital letters...try fix this.
     //Reference: https://exercism.org/tracks/kotlin/exercises/scrabble-score/solutions?page=1
     private fun scoreLetter(char: Char): Int {
         return when (char.uppercase()) {

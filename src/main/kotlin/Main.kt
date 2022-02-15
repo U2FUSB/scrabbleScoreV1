@@ -4,13 +4,6 @@ private val input = Scanner(System.`in`)
 private val scrabbleScore = ScrabbleScore()
 private var end = false
 
-//This program has bugs and incomplete code in it...you will need to fix them so you have the following functionality:
-// The main method should:
-//    - print out the letterValues to the console
-//    - ask the user to enter a word
-//    - display the Scrabble Score for the word (the case of the letters shouldn't matter i.e. u is the same as U)
-//    - the user should be continually asked to enter a word until they type a sentinel value (e.g. -1) to end the program
-
 fun main() {
     println(scrabbleScore.letterValues())
     do {
